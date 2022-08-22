@@ -1,45 +1,17 @@
-/* localStorage.setItem("primeraFoto",JSON.stringify(primeraFoto)) */
 
-/* localStorage.setItem("producto",JSON.stringify(informacionProducto))
-
-window.location.href="./ampliarInfo.html"
-
-
-let contenedorProducto=document.getElementById("factura")
-//escucho clic en la fila
-
-carrito.forEach(function(carrito) {
-    let informacionProducto={}
-
-    contenedorProducto.addEventListener("click",function(evento){
-        if(evento.target.classList.contains("img-fluid")){
-            informacionProducto.nombre=(evento.target.parentElement.querySelector("h3").textContent)
-            informacionProducto.precio=(evento.target.parentElement.querySelector("h4").textContent)
-            informacionProducto.descripcion=(evento.target.parentElement.querySelector("p").textContent)
-            informacionProducto.fotos=(evento.target.parentElement.querySelector("img").src)
-            informacionProducto.popularidad=(evento.target.parentElement.querySelector("h5").textContent)
-    
-            //guardando un objeto en memoria
-            
-            localStorage.setItem("producto",JSON.stringify(informacionProducto))
-    
-            window.location.href="./ampliarInfo.html"
-        } */
-    
-
-let productos=[
+    let productos=[
     {
         nombre:"DRUM KIT Pearl Export EXX 22'' Rock, Smokey Chrome",
         fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/1bateria1.jpg?alt=media&token=5adea6a5-af34-4d77-826b-0677767d935f", "https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/1bateria2.jpg?alt=media&token=f3c4a7ce-1490-44ea-801c-b2e984d65b0d"],
         precio:739.00,
-        popularidad:5,
+        popularidad:4,
         descripcion:"The Pearl Export EXX725BR/C21 22'' Rock Drum Kit, Smokey Chrome is a high-quality drum kit from Pearl, featuring 6-ply poplar and Asian mahogany for a crisp, warm tone complementing a range of drumming styles.Fitted with Remo drum heads,enhanced response and sensitivity is easily achieved. The drums also feature durable chrome hardware, adding to the structural integrity of the shells whilst complementing the stunning smokey chrome finish. The Export EXX Drum Kit is designed for beginner and intermediate drummers and includes a Pearl 830 series hardware pack and a Sabian SBR cymbal set, providing all you need to kick start your drumming career. Onstage or in the studio, the Pearl Export EXX Rock Drum Kit delivers the superior performance that you can expect from all Export series drums"
     },
     {
         nombre:"PIANO Roland GP607 Digital Grand, Polished Ebony",
         fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/2Piano1.jpg?alt=media&token=3a6a8a64-9f32-47e3-8c42-e9fa906b1045", "https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/2piano2.jpg?alt=media&token=8a8e8730-2786-4dc8-9f92-ba824c14c6dc"],
         precio:4.901,
-        popularidad:4,
+        popularidad:3,
         descripcion:"The Roland GP607 Digital Grand Piano has a stunning finish and is packed with class leading technology to offer unforgettable playing experience. The mini grand piano size is large enough to have serious presence on any stage, but remains small enough to comfortably fit inside the home environment. The GP607 benefits from Roland's advanced SuperNatural piano modelling technology, developed over generations of Roland digital pianos. The PHA-50 hammer action keyboard has a similar feel to a true acoustic piano. The Bluetooth connectivity enhances your experience with the GP607 by integrating it with a range of dedicated editing and playback apps. Finally the polished ebony finish introduces a stunning look to this versatile instrument"
     },
     {
@@ -60,8 +32,8 @@ let productos=[
         nombre:"SAXOPHONE Alto Gold",
         fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/4saxo2.jpg?alt=media&token=2406b7ca-17c4-413c-996a-6de94270c94e", "https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/4saxo1.jpg?alt=media&token=9377988e-2f6f-4198-942c-2943fdcfa2ec"],
         precio:319.99,
-        popularidad:5,
-        descripcion:"is a reliable, durable and affordable instrument ideal for beginners and students. The saxophone produces a smooth tone with an easy blowing response ideal for those developing their technique. The durable, fully ribbed body is built to withstand regular practice and transport to and from lessons. A mouthpiece, case, reed and strap are included providing everything you need to get started straight away"
+        popularidad:2,
+        descripcion:"Is a reliable, durable and affordable instrument ideal for beginners and students. The saxophone produces a smooth tone with an easy blowing response ideal for those developing their technique. The durable, fully ribbed body is built to withstand regular practice and transport to and from lessons. A mouthpiece, case, reed and strap are included providing everything you need to get started straight away"
     },
     {
         nombre:"VIOLIN Yamaha Outfit, Full Size",
@@ -75,34 +47,34 @@ let productos=[
         fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/6acordeon1.jpg?alt=media&token=bc33df53-80c4-470e-9ab1-e9d13c8a76a6", "https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/6acordeon2.jpg?alt=media&token=0cef1c04-cb3f-456f-8470-3efd3d799698"],
         precio:399.99,
         popularidad:1,
-        descripcion:"ideal for any beginner or intermediate player. The quality of the Accordion by Gear4music shines through with a fantastic full sound across its bass and treble range. A pearloid design and leather strap help finish our design in style"
+        descripcion:"Ideal for any beginner or intermediate player. The quality of the Accordion by Gear4music shines through with a fantastic full sound across its bass and treble range. A pearloid design and leather strap help finish our design in style"
     },
     {
-        nombre:"Trompeta",
+        nombre:"TRUMPET Student Gold",
         fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/7trompeta1.jpg?alt=media&token=12f5dd59-19c1-40a2-818b-100088c1ac27", "https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/7trompeta2.jpg?alt=media&token=ab8e90c8-19c6-4b8e-ab4d-8aa550c628df"],
         precio:129.99,
         popularidad:5,
-        descripcion:"Student Trumpet by Gear4music, Gold"
+        descripcion:"It's an affordable and robust instrument ideal for beginners. A yellow brass body and medium bore leadpipe produce a resonant and rich sound, even for smaller players. The nickel plated valves are long lasting, responsive and ideal for faster playing. The trumpet comes with a lightweight case and mouthpiece so beginners have everything they need to start playing straight away."
     },
     {
-        nombre:"Citara",
+        nombre:"SITAR Bird Head Design",
         fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/8citara1.jpg?alt=media&token=09ef5bcf-7377-4982-87bb-2e834f3c4ae7", "https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/8citara2.jpg?alt=media&token=45e3d41a-9406-4b2a-a2ea-d39e0aa80dfd"],
         precio:499.99,
-        popularidad:5,
-        descripcion:"Sitar by Gear4music, Bird Head Design"
+        popularidad:4,
+        descripcion:"The Sitar is one of the most common instruments in Indian Classical music ensemble. Featuring 7 primary plus 11 sympathetic strings, this instrument creates a rich and authentic tone that provides a drone throughout the music. This hand carved instrument has been carefully decorated, including a wonderfully designed bird head style peg box. The sitar also comes with a soft carry bag as well as a hard protective wooden case"
     },
     {
-        nombre:"Teclado",
+        nombre:"KEYBOARD MK-2000 61-key Portable - Complete Pack",
         fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/9organeta1.jpg?alt=media&token=7ee196e3-f2d4-42b6-b3f1-2e2a99fac7c1", "https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/9organeta2.jpg?alt=media&token=503c475b-9999-4ca4-8434-c51516281974"],
         precio:109.99,
         popularidad:5,
-        descripcion:"MK-2000 61-key Portable Keyboard by Gear4music - Complete Pack"
+        descripcion:"It's a great choice for pianists taking their first steps into the world of music. Comprehensive, the keyboard comes equipped with 61 keys with a broad range of features including a generous 510 sounds and rhythms, alongside 8 percussion pads and 24 songs you can play along to"
     },
     {
         nombre:"CONGAS LP City Series, Carved Mango",
         fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/congas1.jpg?alt=media&token=41c7ee09-a1b4-4ebd-9c76-a7ed73190e47", "https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/congas2.jpg?alt=media&token=4605de32-ca2e-4a1b-9383-3b201ae8c9c8"],
         precio:385.00,
-        popularidad:5,
+        popularidad:3,
         descripcion:"El set de conga LP City Series es ideal tanto para principiantes como para profesionales gracias a sus potentes tonos y su diseño ergonómico. Los cascos Siam Oak brindan una excelente proyección, ideal para tocar en conjuntos grupales. Estos se combinan con cabezas de cuero natural sin curtir, proporcionando durabilidad y una superficie de juego detallada. Gracias a los cómodos aros EZ Curve y al diseño robusto, el conjunto de conga también es ideal para entornos educativos"
     },
     {
