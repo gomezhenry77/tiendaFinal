@@ -38,9 +38,9 @@ let popularidad=document.getElementById("popularidadInfo")
 popularidad.textContent=producto.popularidad
 popularidad.classList.add("fw-bold", "d-none")
 
-let valorProducto=Math.round(producto.popularidad)
+let cantidadEstrellas=producto.popularidad
 
-for (let index = 1; index <= valorProducto; index++) {
+for (let index = 1; index <= cantidadEstrellas; index++) {
     if (index == 1) {
         let estrella1 = document.getElementById("1estrella")
         estrella1.classList.add("text-warning")
