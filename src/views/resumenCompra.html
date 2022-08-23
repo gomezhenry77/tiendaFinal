@@ -18,15 +18,42 @@
 <body>
 
     <header>
-
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <div>
+            <img src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/logo.jpg?alt=media&token=db2ff022-e4f5-439c-8ed7-aed94ced803d" width="60" alt="Logo" />
+          </div>
+          <h4 class="text-light">Tienda de instrumentos musicales</h4>
+          <div class="d-flex justify-content-center">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <a href="../../index.html" class="text-decoration-none">
+                <p class="text-light fs-5 me-5">Inicio</p>
+              </a>
+              <a href="../views/tienda.html" class="text-decoration-none">
+                <p class="text-light fs-5 me-5">Tienda</p>
+              </a>
+      </nav>
     </header>
     <main>
-        <div class="container" id="factura"></div>
-    </main>
-    <footer>
+        <div class="container" id="factura">
 
+        </div>
+    </main>
+    <footer class="container-fluid p-1 bg-dark navbar-dark text-light">
+      <div class="container-fluid d-flex justify-content-center">
+        <p>
+          &copy; Todos Los Derechos Reservados 2.022
+        </p>
+      </div>
+      <div class="container-fluid d-flex justify-content-center gap-3">
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-pinterest"></i>
+      </div>
     </footer>
     
+    <script src="../controllers/controladorFactura.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>

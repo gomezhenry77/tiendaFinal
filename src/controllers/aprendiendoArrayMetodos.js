@@ -1,4 +1,4 @@
-
+// creando el array que contiene todos los productos de la tienda
     let productos=[
     {
         nombre:"DRUM KIT Pearl Export EXX 22'' Rock, Smokey Chrome",
@@ -87,10 +87,10 @@
 ]
 
 
-
+//trayendo la etiqueta contenedora del html que va a empezar a llenar (la base para pintar)
 let fila=document.getElementById("fila")
 
-//RECORRIENDO EL ARREGLO
+//RECORRIENDO EL ARREGLO. Por cada producto creará las siguientes etiquetas al html desde JS
 productos.forEach(function(producto){
     //creando un div desde JS
     let columna=document.createElement("div", "mt-3")
@@ -105,10 +105,11 @@ productos.forEach(function(producto){
     fotos.classList.add("img-fluid", "w-100")
     fotos.src=producto.fotos[0]
     
-    //detectando evento de mouse
+    //detectando el evento de pasar el mouse sobre una imagen
     fotos.addEventListener("mouseover",function(){
         fotos.src=producto.fotos[1]
     })
+        //detectando el evento de quitar el mouse sobre una imagen
     fotos.addEventListener("mouseleave",function(){
         fotos.src=producto.fotos[0]
     })
