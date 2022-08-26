@@ -34,19 +34,19 @@ if(carrito==null){
     carrito.forEach(function(producto){
 //por cada producto en el carrito crea una fila
         let fila=document.createElement("div")
-        fila.classList.add("row", "my-5", "justify-content-center")
+        fila.classList.add("row", "my-5", "shadow")
 
         let columna1=document.createElement("div")
-        columna1.classList.add("col-12", "col-md-5")
+        columna1.classList.add("col-12", "col-md-4", "border", "justify-content-center")
 
         let columna2=document.createElement("div")
-        columna2.classList.add("col-12", "col-md-3")
+        columna2.classList.add("col-12", "col-md-4", "align-self-center", "border", "py-5")
 
         let columna3=document.createElement("div")
-        columna3.classList.add("col-12", "col-md-3")
+        columna3.classList.add("col-12", "col-md-3", "align-self-center")
 //se crea el elemento definiendo una etiqueta, necesariamente en la segunda se le agrega una clase, finalmente se llena haciendo la referencia (fuente) a la foto que ya está guardada en el objeto foto
         let foto=document.createElement("img")
-        foto.classList.add("img-fluid","w-100")
+        foto.classList.add("img-fluid","w-50", "ms-5")
         foto.src=producto.fotos
 
         let nombre=document.createElement("h3")
@@ -61,22 +61,29 @@ if(carrito==null){
         cantidad.classList.add("text-center")
         cantidad.textContent="Cantidad: "+producto.cantidad
 
-        let subtotal=document.createElement("h2")
-        subtotal.classList.add("fw-bold")
-        
-        console.log(producto.precio);
-        console.log(producto.cantidad);
-        //separa el string
-        let banana=producto.precio.split("£")[1]
-    
-        console.log(producto.precio*producto.cantidad);
-        
-        console.log(banana);
+        let subtotal=document.createElement("h3")
+        subtotal.classList.add("text-center", "bg-dark", "text-light")
 
+        let textoSubtotal=document.createElement("h3")
+        textoSubtotal.classList.add("text-center", "pb-3")
+        textoSubtotal.textContent="Subtotal"
+
+
+        //separa el string
+
+        let subtotalCalculado=producto.precio.split("£")[1]*producto.cantidad
+        
+        subtotal.textContent="£ "+subtotalCalculado
+        
+        console.log(subtotalCalculado);
+
+        
         columna1.appendChild(foto)
         columna2.appendChild(nombre)
         columna2.appendChild(precio)
         columna2.appendChild(cantidad)
+        columna3.appendChild(textoSubtotal)
+        columna3.appendChild(subtotal)
         fila.appendChild(columna1)
         fila.appendChild(columna2)
         fila.appendChild(columna3)
