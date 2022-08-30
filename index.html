@@ -18,8 +18,8 @@
 </head>
 
 <body class="fuente">
-<header>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark bg-gradient">
       <div class="container-fluid">
         <div>
           <img src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/logo.jpg?alt=media&token=db2ff022-e4f5-439c-8ed7-aed94ced803d" width="60" alt="Logo" />
@@ -129,45 +129,22 @@
       <div class="offcanvas-body">
         <form>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">E-mail</label>
+            <label class="form-label">E-mail</label>
             <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              type="email" class="form-control" id="correo"
             />
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Usuario</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
+            <label class="form-label"
               >Contraseña</label
             >
             <input
               type="password"
               class="form-control"
-              id="exampleInputPassword1"
+              id="password"
             />
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Confirmar contraseña</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button id="botonRegistro" type="submit" class="btn btn-primary">Regístrate</button>
         </form>
       </div>
     </div>
@@ -219,30 +196,86 @@
 
   <main>
     <section class="container-fluid">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/banner2.jpg?alt=media&token=c6b6b8e7-65de-485c-8715-5619df70c668" class="d-block w-75" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/donaci%C3%B3n%20de%20instrumentos.jpg?alt=media&token=0f6aebba-373b-4c3a-bb59-0c135d14b668" class="d-block w-75" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/la%20venta%20de%20guitarras%20se%20ha%20disparado.jpg?alt=media&token=f65cd07b-68f6-471d-a37c-471b6e86de6a" class="d-block w-75" alt="...">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide container-sm"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner" style="height: 720px">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/banner2.jpg?alt=media&token=70c1a311-43c4-4042-b84d-35d5f49d26a0"
+              class="d-block w-100"
+              alt="Nuevo estudio de grabación"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Ya tenemos estudio de grabación, reserva tu espacio</h6>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/donaci%C3%B3n%20de%20instrumentos.jpg?alt=media&token=0f6aebba-373b-4c3a-bb59-0c135d14b668"
+              class="d-block w-100"
+              alt="Noticia donación de instrumentos"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Apoyamos el programa para la donación de instrumentos</h6>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/la%20venta%20de%20guitarras%20se%20ha%20disparado.jpg?alt=media&token=f65cd07b-68f6-471d-a37c-471b6e86de6a"
+              class="d-block w-100"
+              alt="Noticia venta de guitarras"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Descubre por qué la venta de guitarra se ha disparado</h6>
+            </div>
+          </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </section>
-
-    <section class="container-fluid p-4 bg-secondary bg-gradient">
+    <section class="container-fluid p-4 bg-warning bg-gradient">
       <div class="container-fluid">
         <h1 class="d-flex justify-content-center">Busca tu tipo de instrumento</h1>
       </div>
@@ -263,7 +296,7 @@
                 <a
                   href="./src/views/tienda.html"
                   target="_blank"
-                  class="btn btn-warning"
+                  class="btn btn-dark"
                   >Ir a la tienda</a
                 >
               </div>
@@ -284,7 +317,7 @@
                 <a
                   href="./src/views/tienda.html"
                   target="_blank"
-                  class="btn btn-warning"
+                  class="btn btn-dark"
                   >Ir a la tienda</a
                 >
               </div>
@@ -305,7 +338,7 @@
                 <a
                   href="./src/views/tienda.html"
                   target="_blank"
-                  class="btn btn-warning"
+                  class="btn btn-dark"
                   >Ir a la tienda</a
                 >
               </div>
@@ -337,7 +370,7 @@
     </section>
   </main>
 
-    <footer class="container-fluid p-1">
+    <footer class="container-fluid p-1 bg-gradient">
       <div class="container-fluid d-flex justify-content-center">
         <p>
           &copy; Todos Los Derechos Reservados 2.022
@@ -351,6 +384,8 @@
       </div>
     </footer>
 
+  <script src="./src/services/conexionFireBase.js" type="module"></script>
+  <script src="./src/services/registro.js" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>

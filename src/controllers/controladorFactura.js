@@ -1,12 +1,14 @@
 //capturando la información del carrito previamente guardada en el local storage. El parse es para convertirla de nuevo en array
 let carrito=JSON.parse(localStorage.getItem("carrito"))
-
+let totalCompra=document.getElementById("totalCompra")
 
 //trayendo la etiqueta contenedora del html que va a empezar a llenar (la base para pintar)
 let factura=document.getElementById("factura")
 
 //compruebo el estado del carrito de compras
 if(carrito==null){
+//poner el total en 0 cuando limpien el carrito
+    totalCompra.textContent="Total= £0"
 //creando una fila en el html. my son márgenes arriba y abajo
     let fila=document.createElement("div")
     fila.classList.add("row", "my-5", "justify-content-center")
@@ -16,7 +18,7 @@ if(carrito==null){
 //creando una imagen en el html
     let imagen=document.createElement("img")
 //todas las clases deben contener las clases "img-fluid" y "w-100"
-    imagen.classList.add("img-fluid", "w-100")
+    imagen.classList.add("img-fluid", "w-75")
     imagen.src="../../assets/img/vacio.png"
 
     let mensaje=document.createElement("h3")
@@ -34,13 +36,13 @@ if(carrito==null){
     carrito.forEach(function(producto){
 //por cada producto en el carrito crea una fila
         let fila=document.createElement("div")
-        fila.classList.add("row", "my-5", "shadow")
+        fila.classList.add("row", "my-3", "shadow")
 
         let columna1=document.createElement("div")
-        columna1.classList.add("col-12", "col-md-4", "border", "justify-content-center")
+        columna1.classList.add("col-12", "col-md-4", "justify-content-center")
 
         let columna2=document.createElement("div")
-        columna2.classList.add("col-12", "col-md-4", "align-self-center", "border", "py-5")
+        columna2.classList.add("col-12", "col-md-4", "align-self-center", "border-end", "py-5")
 
         let columna3=document.createElement("div")
         columna3.classList.add("col-12", "col-md-3", "align-self-center")
@@ -68,6 +70,23 @@ if(carrito==null){
         textoSubtotal.classList.add("text-center", "pb-3")
         textoSubtotal.textContent="Subtotal"
 
+        
+        
+
+        let botonLimpiar=document.getElementById("botonLimpiar")
+        botonLimpiar.addEventListener("click",function(evento){
+            //limpia el carrito de la memoria
+            localStorage.removeItem("carrito")
+
+            //recargar la página
+            window.location.href="./resumenCompra.html"
+        
+            //poner el total en 0 cuando limpien el carrito
+            totalCompra.textContent="Total= £0"
+
+
+        })
+
 
         //separa el string
 
@@ -90,4 +109,5 @@ if(carrito==null){
         factura.appendChild(fila)
 
     })
+
 }
