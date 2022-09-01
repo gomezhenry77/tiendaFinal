@@ -51,7 +51,7 @@ if(carrito==null){
         foto.classList.add("img-fluid","w-50", "ms-5")
         foto.src=producto.fotos
 
-        let nombre=document.createElement("h3")
+        let nombre=document.createElement("h4")
         nombre.classList.add("text-center", "text-muted")
         nombre.textContent=producto.nombre
 
